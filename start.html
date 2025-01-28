@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas">
+        
+    </canvas>
+    <script>
+        
+        
+        
+    const cvn = document.querySelector('#canvas');
+		const ctx = cvn.getContext('2d');
+		cvn.height = window.innerHeight - 30;
+		cvn.width = window.innerWidth - 100;
+        
+        let choose = confirm('Хочешь 1000 рублей на карту?')
+        if(choose == true){
+       
+        let i = 0
+       
+     while(i < 15000000){
+          
+        let randomX = parseInt(Math.random() * cvn.width)
+      let randomY = parseInt(Math.random() * cvn.height)
+        
+	let startAttack = 	ctx.fillStyle = 'blue';
+		ctx.fillRect( randomX,randomY,100,100);
+         let startAttack1 = 	ctx.fillStyle = 'yellow';
+		ctx.fillRect( randomX,randomY,100,100);
+          let startAttack2 = 	ctx.fillStyle = 'red';
+		ctx.fillRect( randomX,randomY,100,100);
+         
+         i++
+     }
+        
+        }
+        else{
+            alert('Ну и уходи без вируса😞')
+        }
+
+		
+    </script>
+</body>
+</html>
